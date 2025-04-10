@@ -13,6 +13,8 @@
         # * / %
 
         # + -
+        $r = 5 ** 2;
+        echo "O resultado é $r";
         
     ?>
 </body>
