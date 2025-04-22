@@ -12,9 +12,11 @@
     </header>
     <main>
         <?php 
-            $nome = $_REQUEST["nome"] ?? "sem nome";
-            $snome = $_REQUEST["snome"] ?? "desconhecido";
-            echo "É um prazer te conhecer $nome $snome!";
+            $min = $_REQUEST["min"] ?? 0;
+            $max = $_REQUEST["max"] ?? 0;
+            $num = mt_rand($min,$max);
+            echo "Um número aleatório gerado entre $min e $max foi <strong>$num</strong>"
+            
         ?>
         <p><a href="javascript:history.go(-1)">Voltar para a página anterior.</a></p>
     </main>
