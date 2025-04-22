@@ -12,9 +12,14 @@
     </header>
     <main>
         <?php 
-            $nome = $_REQUEST["nome"] ?? "sem nome";
-            $snome = $_REQUEST["snome"] ?? "desconhecido";
-            echo "É um prazer te conhecer $nome $snome!";
+            $real = $_REQUEST["currency"] ?? 0;
+            $dol = $real / 5.81;
+
+            //Formatação de moedas com internacionalização;
+            $default = numfmt_create("pt-BR", NumberFormatter :: CURRENCY);
+            
+
+            echo "Seus " . numfmt_format_currency($default, $real, "BRL") . " equivalem a " . numfmt_format_currency($default, $dol, "USD") . ".";
         ?>
         <p><a href="javascript:history.go(-1)">Voltar para a página anterior.</a></p>
     </main>

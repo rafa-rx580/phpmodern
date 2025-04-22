@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Interação com formulários</title>
+    <title>Conversor de Moedas</title>
 </head>
 <body>
     <header>
-        <h1>Apresente-se</h1>
+        <h1>Conversor de moedas</h1>
     </header>
     <section>
-        <form action="cadastro.php" method="get">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome"> <br>
-            <label for="snome">Sobrenome</label>
-            <input type="text" name="snome" id="snome"> <br>
-            <input type="submit" value="Enviar">
+        <form action="cadastro.php">
+            <label for="currency">
+                <p>Quantos reais você tem na carteira? <input type="number" name="currency"></p>
+                <input type="submit" value="Enviar">
+            </label>
         </form>
     </section>
 </body>
