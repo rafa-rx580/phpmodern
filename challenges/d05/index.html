@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Interação com formulários</title>
+    <title>Analisador de números reais</title>
 </head>
 <body>
     <header>
-        <h1>Apresente-se</h1>
+        <h1>Analisador com números reais</h1>
     </header>
     <section>
-        <form action="cadastro.php" method="get">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome"> <br>
-            <label for="snome">Sobrenome</label>
-            <input type="text" name="snome" id="snome"> <br>
+        <form action="cadastro.php" method="post">
+            <label for="num">Insira o número real <input type="number" name="num" id="num" step="0.001"></label>
             <input type="submit" value="Enviar">
         </form>
     </section>

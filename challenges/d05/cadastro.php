@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Resultado</title>
+    <title>Analisando</title>
 </head>
 <body>
-    <header>
-        <h1>Resultado do processamento</h1>
-    </header>
     <main>
-        <?php 
-            $nome = $_REQUEST["nome"] ?? "sem nome";
-            $snome = $_REQUEST["snome"] ?? "desconhecido";
-            echo "É um prazer te conhecer $nome $snome!";
+        <h1>Analisador de números reais</h1>
+        <?php
+        $num = $_POST["num"] ?? 0;
+        echo "<p>Analisando o número <strong>" . number_format($num, 3) . "</strong></p>";
+
+        $i = (int) $num;
+        $f = $num - $i;
+
+        echo "A parte inteira do número " .number_format($num, 3). " é $i, enquanto a parte fracionária é $f";
         ?>
-        <p><a href="javascript:history.go(-1)">Voltar para a página anterior.</a></p>
+        <p><a href="index.html">Voltar</a></p>
     </main>
 </body>
 </html>
